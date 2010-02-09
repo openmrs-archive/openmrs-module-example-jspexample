@@ -13,4 +13,31 @@
            
     <context:component-scan base-package="@MODULE_PACKAGE@" />
     
+    <bean parent="serviceContext">
+		<property name="moduleService">
+			<list>
+				<value>@MODULE_PACKAGE@.JspExampleService</value> <!-- service interface name -->
+				<bean class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+					<property name="transactionManager"><ref bean="transactionManager"/></property>
+					<property name="target">
+						<bean class="@MODULE_PACKAGE@.impl.JspExampleServiceImpl">
+							<property name="jspExampleDAO">
+								<bean class="@MODULE_PACKAGE@.db.hibernate.HibernateJspExampleDAO">
+									<property name="sessionFactory"><ref bean="sessionFactory"/></property>	
+								</bean>
+							</property>	
+						</bean>
+					</property>
+					<property name="preInterceptors">
+						<ref bean="serviceInterceptors"/>
+					</property>
+					<property name="transactionAttributeSource">
+						<bean class="org.springframework.transaction.annotation.AnnotationTransactionAttributeSource"/>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+    
+    
 </beans>

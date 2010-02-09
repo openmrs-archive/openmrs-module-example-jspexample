@@ -15,9 +15,16 @@
 	<activator>@MODULE_PACKAGE@.JspExampleModuleActivator</activator>
 	<!-- /Jsp Example Module Properties -->
 	
+	<requireVersion>1.5.0</requireVersion>
+	
 	<extension>
 		<point>org.openmrs.admin.list</point>
 		<class>org.openmrs.module.jspexample.AdminList</class>
 	</extension>
+	
+	<mappingFiles>
+		
+		RoomTemperature.hbm.xml
+	</mappingFiles>
 	
 </module>

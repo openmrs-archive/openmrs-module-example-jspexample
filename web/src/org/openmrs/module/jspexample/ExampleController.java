@@ -13,8 +13,16 @@
  */
 package org.openmrs.module.jspexample;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openmrs.Encounter;
+import org.openmrs.EncounterType;
+import org.openmrs.Location;
+import org.openmrs.Patient;
+import org.openmrs.api.context.Context;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,7 +50,25 @@ public class ExampleController {
 	 */
 	@RequestMapping(value = "/module/jspexample/examplewithcontroller", method = RequestMethod.GET)
 	public void showPage(ModelMap modelMap) {
-		log.error("In the 'showPage' method");
+		log.trace("In the 'showPage' method");
+		
+		List<Patient> johns = Context.getPatientService().getPatients("john");
+		List<Encounter> encs = new ArrayList<Encounter>();
+		for (Patient p : johns) {
+			encs.addAll(Context.getEncounterService().getEncountersByPatient(p));
+		}
+		Location somewhere = null;
+		EncounterType foo = null;
+		modelMap.put("patients", johns);
+		modelMap.put("encounters", encs);
+		
+		JspExampleService service = Context.getService(JspExampleService.class);
+		
+		RoomTemperature temp = service.getLatestRoomTemperature();
+		
+		modelMap.put("temp", temp);
+		
+		
 	}
 	
 }
