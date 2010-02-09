@@ -1,0 +1,1 @@
+This page can be access at http://localhost:8080/openmrs/module/jspexample/examplewithoutheader.htm because there is no controller defined.

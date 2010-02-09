@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//OpenMRS//DTD OpenMRS Config 1.0//EN" "http://resources.openmrs.org/doctype/config-1.0.dtd">
+
+<module configVersion="1.0">
+	
+	<!-- Jsp Example Module Properties -->
+	<id>jspexample</id>
+	<name>Jsp Example Module</name>
+	<version>0.1</version>
+	<package>org.openmrs.module.@MODULE_ID@</package>
+	<author>ben</author>
+	<description>
+			
+	</description>
+	<activator>@MODULE_PACKAGE@.JspExampleModuleActivator</activator>
+	<!-- /Jsp Example Module Properties -->
+	
+	<extension>
+		<point>org.openmrs.admin.list</point>
+		<class>org.openmrs.module.jspexample.AdminList</class>
+	</extension>
+	
+</module>
