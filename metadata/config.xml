@@ -19,5 +19,9 @@
 		<point>org.openmrs.admin.list</point>
 		<class>org.openmrs.module.jspexample.AdminList</class>
 	</extension>
+	<extension>
+		<point>org.openmrs.gutter.tools</point>
+		<class>org.openmrs.module.jspexample.GutterLink</class>
+	</extension>
 	
 </module>
