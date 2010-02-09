@@ -25,6 +25,7 @@ public class HibernateJspExampleDAO implements JspExampleDAO {
 		//"select * from room_temperature group by time having max(time)";
 		
 		criteria.addOrder(Order.desc("time"));
+		criteria.setMaxResults(1);
 		
 		return (RoomTemperature)criteria.uniqueResult();
 		
