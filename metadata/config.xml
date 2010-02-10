@@ -21,6 +21,10 @@
 		<point>org.openmrs.admin.list</point>
 		<class>org.openmrs.module.jspexample.AdminList</class>
 	</extension>
+	<extension>
+		<point>org.openmrs.module.jspexample.example</point>
+		<class>@MODULE_PACKAGE@.ExampleExtension</class>
+	</extension>
 	
 	<mappingFiles>
 		

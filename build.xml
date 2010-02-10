@@ -5,7 +5,7 @@
 <!-- ** @author ben                                         ** -->
 <!-- ** @version 0.1                                        ** -->
 <!-- ********************************************************* -->
-<project name="jspexample" default="package-module">
+<project name="jspexample-with-custom-object" default="package-module">
 		
 	<!-- *********************************************************** -->
 	<!-- **                     TARGETS                           ** -->

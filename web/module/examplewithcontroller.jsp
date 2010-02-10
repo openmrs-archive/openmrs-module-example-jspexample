@@ -24,7 +24,6 @@
 <h2> Latest Room Temperature </h2>
 ${temp.temp} at <openmrs:formatDate date="${temp.time}"/>
 
-
 This page can be access at either
 
 http://localhost:8080/openmrs/module/jspexample/examplewithcontroller.form
