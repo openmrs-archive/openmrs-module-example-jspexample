@@ -31,6 +31,7 @@ public class AdminList extends AdministrationSectionExt {
 		map.put("/module/jspexample/example.htm", "Example Page");
 		map.put("/module/jspexample/examplewithcontroller.form", "Controller Example Page");
 		map.put("/module/jspexample/examplewithoutheader.htm", "No Headers page");
+		map.put("/module/jspexample/roomTemp.form", "roomtemperature.addRoomTemp");
 		
 		return map;
 	}

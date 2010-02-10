@@ -2,11 +2,11 @@ package org.openmrs.module.jspexample;
 
 import java.util.Date;
 
-import org.openmrs.BaseOpenmrsObject;
+import org.openmrs.BaseOpenmrsData;
 import org.openmrs.OpenmrsObject;
 
 
-public class RoomTemperature extends BaseOpenmrsObject implements OpenmrsObject {
+public class RoomTemperature extends BaseOpenmrsData implements OpenmrsObject {
 	
 	private Integer roomTemperatureId;
 	

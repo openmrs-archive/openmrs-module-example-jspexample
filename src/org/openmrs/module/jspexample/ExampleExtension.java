@@ -13,6 +13,8 @@
  */
 package org.openmrs.module.jspexample;
 
+import java.util.Map;
+
 import org.openmrs.module.Extension;
 
 /**
@@ -25,6 +27,9 @@ public class ExampleExtension extends Extension {
 	}
 
 	public String getMethodOne() {
+		for (Map.Entry<String, String> entry : getParameterMap().entrySet()) {
+			
+		}
 		return "method one. the parameters passed in are:" + getParameterMap().values();
 	}
 	

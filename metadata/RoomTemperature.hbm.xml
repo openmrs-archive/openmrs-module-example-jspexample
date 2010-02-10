@@ -5,7 +5,7 @@
 
 <hibernate-mapping package="org.openmrs.module.jspexample">
 
-	<class name="RoomTemperature" table="room_temperature">
+	<class name="RoomTemperature" table="room_temperature" >
 
 		<id name="roomTemperatureId" type="int" column="room_temperature_id">
 			<generator class="native" />

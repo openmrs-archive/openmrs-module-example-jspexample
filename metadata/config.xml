@@ -26,8 +26,12 @@
 		<class>@MODULE_PACKAGE@.ExampleExtension</class>
 	</extension>
 	
+	<messages>
+		<lang>en</lang>
+		<file>messages.properties</file>
+	</messages>
+	
 	<mappingFiles>
-		
 		RoomTemperature.hbm.xml
 	</mappingFiles>
 	

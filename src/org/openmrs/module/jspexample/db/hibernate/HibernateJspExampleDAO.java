@@ -1,5 +1,7 @@
 package org.openmrs.module.jspexample.db.hibernate;
 
+import java.util.List;
+
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Order;
@@ -31,4 +33,12 @@ public class HibernateJspExampleDAO implements JspExampleDAO {
 		
 	}
 	
+	public void saveRoomTemperature(RoomTemperature rt) {
+		sessionFactory.getCurrentSession().saveOrUpdate(rt);
+	}
+
+	public List<RoomTemperature> getAllRoomTemperatures() {
+		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(RoomTemperature.class);
+		return criteria.list();
+    }
 }
