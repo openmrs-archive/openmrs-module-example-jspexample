@@ -26,6 +26,22 @@
 		<class>@MODULE_PACKAGE@.ExampleExtension</class>
 	</extension>
 	
+	<dwr>
+		<allow>
+			<create creator="new" javascript="DWRRoomTemperatureService">
+				<param name="class" value="@MODULE_PACKAGE@.web.DWRRoomTemperatureService"/>
+				<include method="getAllRoomTemperatures"/>
+			</create>
+		</allow>
+
+		<signatures>
+			<![CDATA[
+			import @MODULE_PACKAGE@.web.DWRRoomTemperatureService;
+			DWRRoomTemperatureService.getAllTemperatures();
+			]]>
+		</signatures>	
+	</dwr>
+	
 	<messages>
 		<lang>en</lang>
 		<file>messages.properties</file>

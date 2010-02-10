@@ -18,4 +18,20 @@ ${temp.temp} at <openmrs:formatDate date="${temp.time}"/>
 	${rt.roomTemperatureId} - ${rt.temp} - <openmrs:formatDate date="${rt.time}"/> <br/>
 </c:forEach>
 
+<br/><br/>
+
+<script src="<openmrs:contextPath/>/dwr/interface/DWRRoomTemperatureService"></script>
+<script>
+	function tempsFound(temps) {
+		alert("Found Temperatures: " + temps.length);
+	}
+	
+	function showTemperatures() {
+		DWRRoomTemperatureService.getAllRoomTemperatures(tempsFound);
+	}
+</script>
+
+<input type="button" onclick="showTemperatures()" value="Show Temperatures"/>
+
+
 <%@ include file="/WEB-INF/template/footer.jsp" %>
