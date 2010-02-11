@@ -26,6 +26,11 @@
 		<class>@MODULE_PACKAGE@.ExampleExtension</class>
 	</extension>
 	
+	<advice>
+		<point>org.openmrs.api.PatientService</point>
+		<class>org.openmrs.module.jspexample.advice.NotificationAfterGettingPatientsAdvice</class>
+	</advice>
+	
 	<dwr>
 		<allow>
 			<create creator="new" javascript="DWRRoomTemperatureService">

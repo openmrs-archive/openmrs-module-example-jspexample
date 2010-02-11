@@ -1,0 +1,39 @@
+<htmlform>
+
+	<h1 align="center">
+		6 month follow up form
+	</h1>
+	
+	<table width="100%">
+		<tr valign="top">
+			<td>
+				<encounterDate default="today"/>
+			</td>
+			<td>
+				Clinic: <encounterLocation/><br/>
+				<obs conceptId="5605" labelText="Travel time:" style="radio"/>
+			</td>
+		</tr>
+	</table>
+	
+	First name: <lookup expression="patient.personName.givenGame"/> <lookup expression="patient.personName.middleName"/><br/>
+	Last name: <lookup expression="patient.personName.familyName"/> <lookup expression="patient.personName.familyName2"/><br/>
+	
+	<table width="100%">
+		<tr>
+			<td><obs conceptId="5089" labelText="Weight"/>kg</td>
+			<td><obs conceptId="5090" labelText="Height"/>cm</td>
+			<td>
+				<obs conceptId="5085" labelText="BP"/> /
+				<obs conceptId="5086"/>
+			</td>
+			<td><obs conceptId="5088" labelText="Temp"/>(o)C</td>
+		</tr>
+	</table>
+	
+	<div align="right">
+		Signature: <encounterProvider role="Provider"/>
+	</div>
+
+	<submit/>
+</htmlform>
